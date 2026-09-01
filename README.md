@@ -18,4 +18,5 @@ The architecture of this project was built using a highly efficient, no-code/low
 * **AI Tool:** Google Gemini
   * **version controlersion control**: GitHUB
 
-* If you want to access date so click on this link : file:///C:/Users/SKHAKH%20MUBASHSHIR/MYvibeDB_executive_sales_profit_dashboard.html
+* If you want to access date so click on this link : https://voluble-mooncake-e5e13f.netlify.app/
+
