@@ -1,0 +1,34 @@
+**detailed prompt**
+Master AI Prompt: Executive Sales & Profit Dashboard
+Build an Executive Sales & Profit Dashboard using the following live JSON data source: [PASTE_API_LINK_HERE]
+Data Processing & Logic Requirements:
+•	ALL data aggregation must happen dynamically on the client side. The data source returns a flat array of JSON objects — do not use a backend or a database.
+•	The Control Center filters at the top must filter the master dataset in memory. Every KPI and every chart on the page must instantly re-calculate using only the filtered data.
+•	Charts must be cross-filterable. Clicking a box on the Treemap, or a slice on the Segment Donut Chart, must act as a global filter and update every other element on the dashboard simultaneously.
+•	KPI Calculations:
+•	Total Revenue = sum of all "Total Revenue" values
+•	Total Profit = sum of all "Total Profit" values
+•	Profit Margin = (Total Profit / Total Revenue) × 100, displayed as a percentage
+•	All charts must fully render and display data automatically on page load. Each chart must resize dynamically to fill its container's width and height without overflowing, clipping, or showing scrollbars.
+Responsive Layout Behavior:
+•	On any desktop or laptop screen, the entire dashboard must fill and fit the full available screen height without any vertical scrolling. All rows must scale proportionally — no section should clip, overflow, or overlap, and no empty space should be left unused at the bottom.
+•	The center section (Treemap + Table) must never consume more than 35% of the total screen height on desktop.
+•	The grid layout must activate based on screen width only. On screens wider than 1024px, always apply the full dashboard grid regardless of screen height. If content overflows vertically, allow scrolling — but never collapse or hide any chart section.
+•	On mobile and tablet devices (screen width below 1024px), switch to a single-column vertical layout where all sections stack on top of each other and the user can scroll through them.
+Theme & Aesthetic Requirements:
+•	Support both a Light Mode and a Dark Mode, toggled by a button in the header.
+•	Use a premium, cohesive color palette that follows professional Business Intelligence standards. Use a single unified primary color for all standard chart data to avoid a chaotic rainbow effect. Strictly reserve Green for positive financial indicators and Red for negative ones.
+Dashboard Sections (in order from top to bottom):
+1.	Header: A "Control Center" bar containing the Light/Dark Mode toggle, a Time slicer (filter by Order Date), and a Region slicer (filter by State).
+2.	KPI Row: 3 large scorecards side by side showing:
+•	Total Revenue
+•	Total Profit
+•	Profit Margin (as a percentage)
+3.	Center Row — 2 panels side by side:
+•	Left panel (65% width): A Treemap showing Total Revenue grouped by State. Each state is a rectangle sized proportionally to its revenue — the bigger the box, the higher the revenue. The boxes must be labeled with the State name and its revenue value. Treemap boxes must use a sequential color scale to encode value — higher revenue boxes must appear in a stronger, more vivid color and lower revenue boxes in a more muted shade. The color scale must have strong enough contrast to remain clearly readable against the dark background. Clicking a state box must cross-filter the entire dashboard.
+•	Right panel (35% width): A Top 5 States ranking table showing the 5 highest-revenue states. Columns: State name, Total Revenue, Total Profit. This table must update when filters are applied.
+4.	Bottom Row — 3 equal columns side by side:
+•	Left: An Area Trend Chart showing Total Revenue over time, grouped by Order Date month. X-axis = month, Y-axis = revenue.
+•	Middle: A Horizontal Bar Chart showing Total Revenue by Sub-Category, sorted from highest to lowest. Clicking a bar must cross-filter the dashboard.
+•	Right: A Donut Chart showing Revenue breakdown by Segment. Each slice must show the segment name and its percentage. Clicking a slice must cross-filter the dashboard.
+
